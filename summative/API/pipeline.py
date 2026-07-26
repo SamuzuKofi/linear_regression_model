@@ -24,11 +24,14 @@ REQUIRED_COLUMNS = ["Stream", "Views", "Likes", "Comments", "Danceability"]
 LOG_COLUMNS = ["Stream", "Views", "Likes", "Comments"]
 
 
-def load_and_clean(csv_path: str) -> pd.DataFrame:
-    df = pd.read_csv(csv_path)
+def load_and_clean_df(df: pd.DataFrame) -> pd.DataFrame:
     df = df.drop(columns=[c for c in IDENTIFIER_COLUMNS if c in df.columns])
     df = df.dropna(subset=[c for c in REQUIRED_COLUMNS if c in df.columns]).reset_index(drop=True)
     return df
+
+
+def load_and_clean(csv_path: str) -> pd.DataFrame:
+    return load_and_clean_df(pd.read_csv(csv_path))
 
 
 def engineer_features(df_clean: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, list[str]]:
