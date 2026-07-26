@@ -17,5 +17,4 @@ linear_regression_model/
 │   └── pyproject.toml            # uv-managed environment
 ```
 
-## Status
-This README is being filled in as the project is built (dataset description + visualizations, live API/Swagger URL, video demo link, and Flutter run instructions are still TODO).
+
