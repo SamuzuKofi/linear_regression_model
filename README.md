@@ -5,6 +5,26 @@ Ghana's creative sector (especially music) has real export potential, but indivi
 
 **Scope note:** the model's strongest predictors (YouTube Views/Likes/Comments) are engagement metrics, so this is a *post-release trajectory / promotion-planning* tool, not a pre-release hit predictor — it's most useful once a track and its video are live (plug in real numbers to gauge potential), or beforehand with target numbers to plan how much promotion effort a given streaming goal requires.
 
+### Where to get the input values
+
+- **YouTube Views / Likes / Comments:** use the real numbers from the track's official video once it's live, or a **target** you're planning toward, to see what payoff that promotion goal would translate to in predicted streams.
+- **Tempo, Duration, Loudness:** measurable directly from your own mix/master in any DAW (BPM, track length, and a loudness meter reading are all things you already know about your own track).
+- **Key:** enter it as a number using standard pitch-class numbering — see the table below.
+- **Danceability, Energy, Speechiness, Acousticness, Instrumentalness, Liveness, Valence:** these were originally sourced from Spotify's own audio-analysis, but **Spotify deprecated public access to its `audio-features`/`audio-analysis` endpoints for new developer apps on 2024-11-27** ([official announcement](https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api)), so they can no longer be pulled from Spotify directly for a new track. In practice, approximate these using **[Tunebat's Analyzer](https://tunebat.com/Analyzer)** — search an existing Spotify track by name/link, or upload your own audio file directly for a new, unreleased song — or a careful self-estimate. These are third-party ML estimates, not Spotify's exact proprietary numbers, but should be directionally close enough to explore how a production choice shifts the prediction.
+
+### Key numbering (pitch class)
+
+| Key | # | Key | # |
+|---|---|---|---|
+| C | 0 | F♯/G♭ | 6 |
+| C♯/D♭ | 1 | G | 7 |
+| D | 2 | G♯/A♭ | 8 |
+| D♯/E♭ | 3 | A | 9 |
+| E | 4 | A♯/B♭ | 10 |
+| F | 5 | B | 11 |
+
+Key has almost no relationship with streaming success in this data (correlation ≈ -0.006 — essentially none) — average streams range from ~155M (C♯/D♭) down to ~119M (A) across the 20,718 tracks, but that ~30% spread is most likely noise or a proxy for genre, not a real effect of the key itself. It's included for completeness, but don't expect changing it to meaningfully move a prediction.
+
 ## Live API (Swagger UI)
 **https://linear-regression-model-4z71.onrender.com/docs**
 
