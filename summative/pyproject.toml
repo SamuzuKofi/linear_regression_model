@@ -1,0 +1,24 @@
+[project]
+name = "summative"
+version = "0.1.0"
+description = "Orange Economy Ghana - freelance creative earnings regression, API, and Flutter app"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+    "joblib>=1.4",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.9",
+    "python-multipart>=0.0.9",
+    "requests>=2.32",
+    "scipy>=1.13",
+]
+
+[tool.uv]
+package = false

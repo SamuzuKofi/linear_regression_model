@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+*.egg-info/
+
+# uv
+summative/.venv/
+
+# Jupyter
+.jupyter/
+
+# Flutter
+summative/FlutterApp/**/build/
+summative/FlutterApp/**/.dart_tool/
+summative/FlutterApp/**/.flutter-plugins
+summative/FlutterApp/**/.flutter-plugins-dependencies
+summative/FlutterApp/**/.packages
+summative/FlutterApp/**/ios/Pods/
+
+# OS
+.DS_Store
+
+# Env / secrets
+.env
+*.kaggle/
+kaggle.json
